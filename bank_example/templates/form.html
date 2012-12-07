@@ -1,0 +1,15 @@
+<form method="POST" action="{{ payment.provider.endpoint }}">
+  {% for field in payment.form -%}
+  {% set name, value = field -%}
+  <input name="{{ name }}" value="{{ value }}" type="hidden">
+  {% endfor -%}
+<dl>
+  <dt>Amount:</dt>
+  <dd>{{ payment.info.amount }}</dd>
+  <dt>Message:</dt>
+  <dd>{{ payment.info.message }}</dd>
+  <dt>Valitud pank:</dt>
+  <dd>{{ payment.provider.name }}</dd>
+</dl>
+<input type="submit" value="Suundu panga lehele">
+</form>

@@ -1,0 +1,5 @@
+{% for id, provider in providers.iteritems() -%}
+<form method="POST" action="{{ url_for('payment', bank=id) }}">
+  <input type="submit" value="{{ provider.name }}">
+</form>
+{% endfor %}

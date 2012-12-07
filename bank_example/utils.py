@@ -27,4 +27,7 @@ def init_provider(cls, data):
         keychain = p.KeyChain(**data['auth'])
     else:
         raise RuntimeError('Unknown payment provider: %s' % cls)
-    return p(data['user'], keychain, data['endpoint'])
+    provider = p(data['user'], keychain, data['endpoint'])
+    # Add some extra fields
+    provider.name = data['name']
+    return provider
