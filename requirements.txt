@@ -1,0 +1,4 @@
+Flask
+pycrypto
+# WireXfers (no release yet)
+#-e git+git@github.com:plaes/wirexfers.git#egg=WireXfers
