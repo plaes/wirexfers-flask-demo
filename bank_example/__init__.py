@@ -47,11 +47,24 @@ class DefaultConfig(object):
         },
         'ipizza.EELHV': {
             'name': 'LHV Pank',
-            # Authentication information for IPizza keychain
             'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
             'user': 'uid285812',
             'endpoint': 'https://pangalink.net/banklink/008/lhv',
             'extra_args': {'keypath': 'data/lhv'},
+        },
+        'ipizza.EESEB': {
+            'name': 'SEB Pank',
+            'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
+            'user': 'uid285870',
+            'endpoint': 'https://pangalink.net/banklink/008/seb',
+            'extra_args': {'keypath': 'data/seb'},
+        },
+        'ipizza.EESwedBank': {
+            'name': 'SWEDBank',
+            'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
+            'user': 'uid285883',
+            'endpoint': 'https://pangalink.net/banklink/008/swedbank',
+            'extra_args': {'keypath': 'data/swedbank'},
         },
     }
 
