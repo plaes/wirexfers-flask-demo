@@ -36,7 +36,15 @@ class DefaultConfig(object):
             'user': '12345678',
             'endpoint': 'https://netbank.nordea.com/pnbepaytest/epayn.jsp'
         },
-        # IPizza (TODO)
+        # IPizza banks
+        'ipizza.EEKrediidipank': {
+            'name': 'Krediidipank',
+            # Authentication information for IPizza keychain
+            'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
+            'user': 'uid285582',
+            'endpoint': 'https://pangalink.net/banklink/008/krediidipank',
+            'extra_args': {'keypath': 'data/krediidipank'},
+        },
     }
 
 # Initialize app and configuration
