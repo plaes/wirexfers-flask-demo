@@ -1,4 +1,4 @@
-<form method="POST" action="{{ payment.provider.endpoint }}">
+<form method="POST" action="{{ payment.provider.endpoint }}" accept-charset="{{ payment.provider.form_charset }}">
   {% for field in payment.form -%}
   {% set name, value = field -%}
   <input name="{{ name }}" value="{{ value }}" type="hidden">

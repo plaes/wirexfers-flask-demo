@@ -36,10 +36,17 @@ class DefaultConfig(object):
             'user': '12345678',
             'endpoint': 'https://netbank.nordea.com/pnbepaytest/epayn.jsp'
         },
-        # IPizza banks
+        # IPizza banks (via pangalink.net)
+        'ipizza.EEDanske': {
+            'name': 'Danske Bank',
+            # Authentication information for IPizza keychain
+            'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
+            'user': 'uid285867',
+            'endpoint': 'https://pangalink.net/banklink/008/sampo',
+            'extra_args': {'keypath': 'data/danske'},
+        },
         'ipizza.EEKrediidipank': {
             'name': 'Krediidipank',
-            # Authentication information for IPizza keychain
             'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
             'user': 'uid285582',
             'endpoint': 'https://pangalink.net/banklink/008/krediidipank',
@@ -87,7 +94,7 @@ def payment():
     if not bank or bank not in app.providers:
         return redirect(url_for('index'))
     # Set up payment information (amount, description and reference no.)
-    payment_info = PaymentInfo('6.66', 'Payment info', ref_731('123456'))
+    payment_info = PaymentInfo('6.66', u'Payment infö', ref_731('123456'))
     # Set up return urls
     urls = {'return': url_for('finish', _external=True)}
     # Do bank-specific handling (ie. Tupas/SOLO has extra return urls)
