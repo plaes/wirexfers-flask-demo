@@ -1,4 +1,30 @@
-Pangalinkide demo Flaski jaoks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Flask demo for WireXfers
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lihtne demorakendus pangalinkide toe jaoks.
+Simple demo application demonstrating WireXfers usage with Flask.
+
+Requirements
+------------
+  o Flask
+  o PyCrypto
+  o WireXfers
+
+Notes
+-----
+
+Protocols using private/public key pair require keys to be in `pem` format.
+Extracting keys from certificate (`cert.pem`) using `openssl` utility:
+
+     openssl x509 -inform pem -in cert.pem -pubkey -noout
+
+Private key should look like this:
+
+    -----BEGIN RSA PRIVATE KEY-----
+    ...
+    -----END RSA PRIVATE KEY-----
+
+And public key like this:
+
+    -----BEGIN PUBLIC KEY-----
+    ...
+    -----END PUBLIC KEY-----
