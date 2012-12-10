@@ -45,6 +45,14 @@ class DefaultConfig(object):
             'endpoint': 'https://pangalink.net/banklink/008/krediidipank',
             'extra_args': {'keypath': 'data/krediidipank'},
         },
+        'ipizza.EELHV': {
+            'name': 'LHV Pank',
+            # Authentication information for IPizza keychain
+            'auth': {'private_key': 'private_key.pem', 'public_key': 'public_key.pem'},
+            'user': 'uid285812',
+            'endpoint': 'https://pangalink.net/banklink/008/lhv',
+            'extra_args': {'keypath': 'data/lhv'},
+        },
     }
 
 # Initialize app and configuration
