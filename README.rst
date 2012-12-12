@@ -1,10 +1,13 @@
-WireXfers integration with Flask
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sample WireXfers integration with Flask
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Simple demo application demonstrating WireXfers_ usage with Flask_.
+Written by `Priit Laes`_ and sponsored by Povi_.
 
+.. _Flask: http://flask.pocoo.org
+.. _Povi: http://povi.ee
+.. _Priit Laes: http://plaes.org
 .. _WireXfers: http://plaes.org/projects/wirexfers
-.. _Flask: http://flask.pocoo.org/
 
 
 Requirements

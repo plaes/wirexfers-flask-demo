@@ -1,3 +1,3 @@
-from bank_example import app
+from wirexfers_flask_demo import app
 
 app.run()

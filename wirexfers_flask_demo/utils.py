@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-    flask-pangalink.utils
-    ~~~~~~~~~~~~~~~~~~~~~
+    wirexfers_flask_demo.utils
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Simple common util functions
+    Common utility functions.
 
-    :copyright: (c) 2012, Priit Laes
+    :copyright: (c) 2012, Priit Laes, sponsored by Povi - http://povi.ee
 """
 import os
 

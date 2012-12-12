@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-    flask-pangalink
-    ~~~~~~~~~~~~~~~
+    wirexfers_flask_demo
+    ~~~~~~~~~~~~~~~~~~~~
 
-    Example banklink application
+    Basic WireXfers integration example.
 
-    :copyright: (c) 2012, Priit Laes
+    :copyright: (c) 2012, Priit Laes, sponsored by Povi - http://povi.ee
 """
 from flask import Flask, redirect, render_template, request, session, url_for
 from wirexfers import PaymentInfo
@@ -16,7 +16,6 @@ from . import utils
 
 def app_setup_payments(conf):
     providers = {}
-    c = conf.get('PAYMENTS', {})
     for p, data in conf.get('PAYMENTS', {}).iteritems():
         providers[p] = utils.init_provider(p, data)
     return providers
@@ -83,8 +82,8 @@ app.providers = app_setup_payments(app.config)
 
 @app.route('/')
 def index():
-    # Teoorias peaks juba siin tekitama PaymentInfo, aga kuna me baasi ei
-    # kasuta, siis teeme seda alles peale seda kui kasutaja on panga valinud.
+    # Paymentinfo should be already present here, but as it's a simple demo
+    # app, we do it after user has chosen the bank.
     return render_template('index.html', providers=app.providers)
 
 @app.route('/payment/', methods=['POST'])
