@@ -9,15 +9,18 @@ Written by `Priit Laes`_ and sponsored by Povi_.
 .. _Priit Laes: http://plaes.org
 .. _WireXfers: http://plaes.org/projects/wirexfers
 
-
 Requirements
 ------------
+
 - Flask
 - PyCrypto
 - WireXfers
 
 Notes
 -----
+
+IPizza payments are done against pangalink.net_ test service, mainly because
+most banks lack testing services (indeed, they do!).
 
 Protocols using private/public key pair require keys to be in `pem` format.
 Extracting keys from certificate (`cert.pem`) using `openssl` utility::
@@ -35,3 +38,5 @@ And public key like this::
     -----BEGIN PUBLIC KEY-----
     ...
     -----END PUBLIC KEY-----
+
+.. _pangalink.net: http://pangalink.net
