@@ -6,6 +6,7 @@
     Basic WireXfers integration example.
 
     :copyright: (c) 2012, Priit Laes, sponsored by Povi - http://povi.ee
+    :license: ISC, see LICENSE for more details.
 """
 from flask import Flask, redirect, render_template, request, session, url_for
 from wirexfers import PaymentInfo

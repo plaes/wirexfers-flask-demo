@@ -6,6 +6,7 @@
     Common utility functions.
 
     :copyright: (c) 2012, Priit Laes, sponsored by Povi - http://povi.ee
+    :license: ISC, see LICENSE for more details.
 """
 import os
 
